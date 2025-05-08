@@ -6,8 +6,28 @@
 </head>
 <body> 
     
-    
-    <h1>Feira Tecnológica 2025</h1>
+   
+    <h1 id="titulo">Feira Tecnológica 2025</h1>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+function chuvaConfete() {
+  confetti({
+    particleCount: 3,
+    startVelocity: 0,
+    spread: 360,
+    ticks: 200,
+    origin: {
+      x: Math.random(),   // posição aleatória na horizontal
+      y: 0                // sempre começa do topo
+    }
+  });
+  setTimeout(chuvaConfete, 100);
+}
+
+chuvaConfete();
+</script>
+  
    
     <nav>
         <a href="index.html">Início</a> |
@@ -43,6 +63,9 @@
             z-index: 0;
         }
 
+       
+       
+       
         /* Fundo com imagem e escurecimento */
         body::before {
             content: "";
@@ -64,6 +87,7 @@
             z-index: -1;
         }
 
+       
         /* Cabeçalho */
         h1 {
             text-align: center;
@@ -80,13 +104,19 @@
             margin-bottom: 10px;
         }
 
-
-.pinto{
+        .pinto{
 
     margin-top: 20px;
 }
 
-        /* Navegação */
+       
+
+
+
+
+
+
+/* Navegação */
         nav {
             text-align: center;
             margin-bottom: 30px;
@@ -104,7 +134,14 @@
             color: #1abc9c;
         }
 
+        
+        
+        
+        
+        
+        
         /* Container */
+        
         .container {
             max-width: 600px;
             margin: auto;
@@ -114,6 +151,11 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
+        
+        
+        
+        
+        
         /* Formulário */
         form label {
             display: block;
